@@ -1,0 +1,11 @@
+name: actionlint
+on:
+  workflow_call:
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+      - uses: reviewdog/action-actionlint@7485c2136bd093a5c3e6f0acc7ee27a3d28ade35  # v1.65.2
+        with:
+          fail_on_error: true
